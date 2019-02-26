@@ -1,7 +1,7 @@
 all:
 
 Exploits1:	
-	nasm -f win64 src/Exploits1_01.asm -o obj/exploit.o
+	nasm -f elf src/Exploits1_01.asm -o obj/exploit.o
 
 printer:
 	gcc -c src/hexprint.c -o obj/hexprint.o 
