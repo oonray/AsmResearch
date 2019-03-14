@@ -7,7 +7,7 @@ int main(){
     unsigned char *start = (unsigned char *) shellstart;
     unsigned char *stop = (unsigned char *) shellstop;
     while(start != stop){
-        printf("%02x",*start);
+        printf("\\x%02x",*start);
         start++;
     }
     return 0;
