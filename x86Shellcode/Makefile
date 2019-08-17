@@ -1,5 +1,7 @@
-all:clean dirs printer Exploit1 Exploit2
+all:clean dirs printer Exploit1 Exploit2 Harness
 
+Harness:
+	gcc src/shellcode_harness.c -o bin/shellcode_harness
 
 Exploit1: 	
 	nasm -f elf src/Exploit01.asm -o obj/exploit.o
