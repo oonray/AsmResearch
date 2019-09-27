@@ -1,7 +1,7 @@
-all:clean dirs printer Exploit1 Exploit2 Harness
+all:clean dirs printer Exploit1 Exploit2 Exploit3 Harness
 
 Harness:
-	gcc src/shellcode_harness.c -o bin/shellcode_harness
+	tcc -g src/shellcode_harness.c -o bin/shellcode_harness
 
 Exploit1: 	
 	nasm -f elf src/Exploit01.asm -o obj/exploit.o
@@ -12,8 +12,8 @@ Exploit2:
 	ld obj/exploit2.o -o bin/exploit2
 	objdump -D bin/exploit2 > text/exploit2
 Exploit3:
-	nasm -f elf src/Exploit03.asm -o obj/exploit3.0
-	ld obj/exploit3.o -o bin/exploit3
+	nasm -f elf src/Exploit03.asm -o obj/exploit03.o
+	ld obj/exploit03.o -o bin/exploit3
 	objdump -D bin/exploit3 > text/exploit3
 
 printer:
