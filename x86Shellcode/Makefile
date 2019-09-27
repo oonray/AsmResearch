@@ -10,7 +10,11 @@ Exploit1:
 Exploit2: 	
 	nasm -f elf src/Exploit02.asm -o obj/exploit2.o
 	ld obj/exploit2.o -o bin/exploit2
-	objdump -D bin/exploit > text/exploit
+	objdump -D bin/exploit2 > text/exploit2
+Exploit3:
+	nasm -f elf src/Exploit03.asm -o obj/exploit3.0
+	ld obj/exploit3.o -o bin/exploit3
+	objdump -D bin/exploit3 > text/exploit3
 
 printer:
 	gcc -c src/hexprint.c -o obj/hexprint.o 
