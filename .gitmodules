@@ -1,0 +1,3 @@
+[submodule "x86FileWriter"]
+	path = x86FileWriter
+	url = git@github.com:oonray/x86FileWriter.git
